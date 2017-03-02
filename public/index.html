@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ScreenChat</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>ScreenChat</h1>
+    <div class="row">
+        <button id="btnTest" class="btn btn-primary">Screen</button>
+        <form id="userNameForm">
+            <div class="input-group">
+                <input type="text" class="form-control" id="userName" placeholder="Hello! What's your name?"/>
+                <span class="input-group-btn">
+                    <input type="submit" class="btn btn-primary" value="It's my name"/>
+                </span>
+            </div>
+
+        </form>
+        <div id="chatPanel">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Users</div>
+                    <div class="panel-body">
+                        <ul id="chatUsers" class="list-group">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="chatArea"></div>
+                <form id="sendMessageForm">
+                    <textarea id="message" class="form-control"></textarea>
+                    <br />
+                    <input type="submit" class="btn btn-primary" value="Send"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <img id="image" width="800"/>
+</div>
+</body>
+</html>
