@@ -62,9 +62,7 @@ const screen = io.of("/screen").on("connection", (socket) => {
         sendScreen();
     }, 100);
     //sendScreen();
-    /*socket.on("getSreen",()=>{
-        sendScreen();
-    });*/
+
     function sendScreen() {
         screenshot(imgScreen, (error, complete) => {
             if(error)
@@ -83,27 +81,3 @@ const screen = io.of("/screen").on("connection", (socket) => {
         });
     }
 });
-
-
-
-
-
-
- /*app.get("/", (req, res) => {
- res.write("ololo");
- console.log("write ololo");
- });
-*/
-
-
-/*
- const screenshot = require('desktop-screenshot');
- screenshot(imgScreen, (error, complete) => {
- if(error)
- console.log("Screenshot failed", error);
- else {
- fs.createReadStream(imgScreen).pipe(res);
- console.log(complete);
-
- }
- })*/

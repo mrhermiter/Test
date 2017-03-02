@@ -69,16 +69,10 @@ $(function () {
     });
 
 
-/*    var example = document.getElementById("image"),
-        ctx       = example.getContext('2d'), // Контекст
-        pic       = new Image();              // "Создаём" изображение
-      // Источник изображения, позаимствовано на хабре
-    pic.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
-        ctx.drawImage(pic, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
-    }*/
+
 
     screen.on("endNewScreen",(data)=>{
-        //console.log(data);
+
         var blob = new Blob(view, {type: "image/png"});
         var a=URL.createObjectURL(blob);
 
